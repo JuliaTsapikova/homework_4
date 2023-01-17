@@ -16,7 +16,7 @@ int getUserData(string message)
     return result;
 }
 
-int sumOfDigits(int N)
+void sumOfDigits(int N)
 {   int result = 0;
     while(N > 0)
     {
@@ -24,12 +24,11 @@ int sumOfDigits(int N)
         result = result + B;
         N = N / 10;
     }
-    return result;
+    Console.WriteLine($"Сумма цифр числа равна: {result}");
 
 }
 int N = getUserData("Введите число: ");
-int M = sumOfDigits(N);
-Console.WriteLine($"Сумма цифр числа равна: {M}");
+sumOfDigits(N);
 
 
 
